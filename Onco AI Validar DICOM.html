@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Onco AI - Validación de Formato DICOM</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#eef2f7;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    background:#2f855a;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:5px;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:1000px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* TITULOS */
+
+.section-title{
+    font-size:20px;
+    margin-bottom:15px;
+    border-bottom:2px solid #e2e8f0;
+    padding-bottom:8px;
+}
+
+/* AREA UPLOAD */
+
+.upload-box{
+    border:2px dashed #a0aec0;
+    padding:40px;
+    text-align:center;
+    border-radius:6px;
+    color:#4a5568;
+}
+
+/* TABLA */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    border:1px solid #e2e8f0;
+    padding:10px;
+    text-align:left;
+}
+
+th{
+    background:#f7fafc;
+}
+
+/* ESTADOS */
+
+.status-ok{
+    color:green;
+    font-weight:bold;
+}
+
+.status-error{
+    color:red;
+    font-weight:bold;
+}
+
+/* BOTONES */
+
+.buttons{
+    margin-top:25px;
+    text-align:right;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.validate{
+    background:#3182ce;
+    color:white;
+}
+
+.clear{
+    background:#e53e3e;
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Onco AI</h1>
+<p>Validación de Formato DICOM</p>
+</header>
+
+<div class="container">
+
+<div class="section-title">Carga de Archivo DICOM</div>
+
+<div class="upload-box">
+
+<p>Arrastre el archivo DICOM aquí</p>
+<p>o</p>
+
+<input type="file">
+
+<p>El sistema verificará estructura, etiquetas y consistencia</p>
+
+</div>
+
+<br>
+
+<div class="section-title">Resultado de Validación</div>
+
+<table>
+
+<tr>
+<th>Parámetro</th>
+<th>Resultado</th>
+<th>Descripción</th>
+</tr>
+
+<tr>
+<td>Encabezado DICOM</td>
+<td class="status-ok">Válido</td>
+<td>Encabezado reconocido correctamente</td>
+</tr>
+
+<tr>
+<td>Transfer Syntax</td>
+<td class="status-ok">Correcto</td>
+<td>Formato compatible con el sistema</td>
+</tr>
+
+<tr>
+<td>Etiquetas obligatorias</td>
+<td class="status-ok">Presentes</td>
+<td>Paciente, estudio e imagen identificados</td>
+</tr>
+
+<tr>
+<td>Integridad del archivo</td>
+<td class="status-error">Advertencia</td>
+<td>Etiqueta opcional faltante</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Metadatos del Archivo</div>
+
+<table>
+
+<tr>
+<th>Etiqueta</th>
+<th>Valor</th>
+</tr>
+
+<tr>
+<td>Patient Name</td>
+<td>Maria Lopez</td>
+</tr>
+
+<tr>
+<td>Study Date</td>
+<td>2026-03-08</td>
+</tr>
+
+<tr>
+<td>Modality</td>
+<td>MG (Mammography)</td>
+</tr>
+
+<tr>
+<td>Manufacturer</td>
+<td>Siemens</td>
+</tr>
+
+<tr>
+<td>Image Dimensions</td>
+<td>4096 x 3328</td>
+</tr>
+
+</table>
+
+<div class="buttons">
+
+<button class="validate">Validar Archivo</button>
+<button class="clear">Limpiar</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Onco AI - Inferencia del Modelo IA</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f3f4f6;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    background:#7c3aed;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:5px;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:1100px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* TITULOS */
+
+.section-title{
+    font-size:20px;
+    border-bottom:2px solid #e2e8f0;
+    padding-bottom:8px;
+    margin-bottom:15px;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+/* VISOR */
+
+.viewer{
+    border:1px solid #cbd5e1;
+    padding:15px;
+    border-radius:6px;
+    text-align:center;
+}
+
+.viewer img{
+    width:100%;
+    height:300px;
+    object-fit:contain;
+    background:#f8fafc;
+}
+
+/* INFORMACION MODELO */
+
+.model-info{
+    background:#f9fafb;
+    border:1px solid #e5e7eb;
+    padding:15px;
+    border-radius:6px;
+}
+
+/* RESULTADOS */
+
+.result-box{
+    margin-top:15px;
+    padding:20px;
+    border-radius:6px;
+    text-align:center;
+}
+
+.benigno{
+    background:#dcfce7;
+    color:#166534;
+}
+
+.maligno{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+/* BARRA PROBABILIDAD */
+
+.progress{
+    width:100%;
+    background:#e5e7eb;
+    border-radius:20px;
+    height:25px;
+    overflow:hidden;
+    margin-top:10px;
+}
+
+.progress-bar{
+    height:100%;
+    width:65%;
+    background:#ef4444;
+}
+
+/* PIPELINE */
+
+.pipeline{
+    margin-top:20px;
+    background:#111827;
+    color:#e5e7eb;
+    padding:15px;
+    font-family:monospace;
+    border-radius:5px;
+    height:150px;
+    overflow-y:auto;
+}
+
+/* BOTONES */
+
+.buttons{
+    margin-top:25px;
+    text-align:right;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.run{
+    background:#2563eb;
+    color:white;
+}
+
+.reset{
+    background:#ef4444;
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Onco AI</h1>
+<p>Inferencia del Modelo de Inteligencia Artificial</p>
+</header>
+
+<div class="container">
+
+<div class="section-title">Imagen Analizada</div>
+
+<div class="grid">
+
+<div class="viewer">
+<h3>Mastografía Procesada</h3>
+<img src="" alt="Imagen de mastografía">
+</div>
+
+<div class="model-info">
+
+<h3>Información del Modelo</h3>
+
+<p><strong>Arquitectura:</strong> CNN</p>
+<p><strong>Framework:</strong> PyTorch / TensorFlow</p>
+<p><strong>Versión del Modelo:</strong> v1.0</p>
+<p><strong>Resolución de Entrada:</strong> 512x512</p>
+<p><strong>Tipo de Clasificación:</strong> Benigno / Maligno</p>
+
+<div class="result-box maligno">
+
+<h2>Resultado del Análisis</h2>
+
+<p><strong>Clasificación:</strong> Sospecha de malignidad</p>
+
+<p>Probabilidad de cáncer</p>
+
+<div class="progress">
+<div class="progress-bar"></div>
+</div>
+
+<p><strong>65%</strong></p>
+
+</div>
+
+</div>
+
+</div>
+
+<br>
+
+<div class="section-title">Ejecución del Modelo</div>
+
+<div class="pipeline">
+
+Cargando modelo CNN...<br>
+Modelo cargado correctamente.<br>
+Preparando tensor de entrada...<br>
+Ejecutando forward pass...<br>
+Calculando probabilidades...<br>
+Predicción generada.<br>
+
+</div>
+
+<div class="buttons">
+
+<button class="run">Ejecutar Inferencia</button>
+<button class="reset">Reiniciar</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

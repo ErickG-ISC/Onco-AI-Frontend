@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Onco AI - Mapa de Calor</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f1f5f9;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    background:#b91c1c;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:5px;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:1200px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* TITULOS */
+
+.section-title{
+    font-size:20px;
+    border-bottom:2px solid #e2e8f0;
+    padding-bottom:8px;
+    margin-bottom:15px;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+
+/* VISORES */
+
+.viewer{
+    border:1px solid #cbd5e1;
+    padding:10px;
+    border-radius:6px;
+    text-align:center;
+}
+
+.viewer img{
+    width:100%;
+    height:300px;
+    object-fit:contain;
+    background:#f8fafc;
+}
+
+/* RESULTADO */
+
+.result{
+    margin-top:20px;
+    padding:15px;
+    border-radius:6px;
+    background:#fee2e2;
+    color:#991b1b;
+    font-weight:bold;
+}
+
+/* CONTROLES */
+
+.controls{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:20px;
+}
+
+.control-group{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+select, input{
+    padding:8px;
+    border:1px solid #cbd5e0;
+    border-radius:5px;
+}
+
+/* PIPELINE */
+
+.pipeline{
+    margin-top:20px;
+    background:#0f172a;
+    color:#e2e8f0;
+    padding:15px;
+    border-radius:5px;
+    font-family:monospace;
+    height:150px;
+    overflow-y:auto;
+}
+
+/* BOTONES */
+
+.buttons{
+    margin-top:25px;
+    text-align:right;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.generate{
+    background:#2563eb;
+    color:white;
+}
+
+.reset{
+    background:#ef4444;
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Onco AI</h1>
+<p>Generación de Mapa de Calor (Explainability)</p>
+</header>
+
+<div class="container">
+
+<div class="section-title">Visualización del Análisis</div>
+
+<div class="grid">
+
+<div class="viewer">
+<h3>Imagen Original</h3>
+<img src="" alt="Mastografía original">
+</div>
+
+<div class="viewer">
+<h3>Mapa de Calor (Grad-CAM)</h3>
+<img src="" alt="Mapa de calor">
+</div>
+
+<div class="viewer">
+<h3>Superposición (Overlay)</h3>
+<img src="" alt="Overlay imagen + heatmap">
+</div>
+
+</div>
+
+<div class="result">
+
+Resultado del modelo: Región sospechosa detectada  
+Probabilidad de malignidad: 72%
+
+</div>
+
+<div class="section-title">Parámetros de Explainability</div>
+
+<div class="controls">
+
+<div class="control-group">
+<label>Capa Convolucional Analizada</label>
+<select>
+<option>conv_layer_3</option>
+<option>conv_layer_4</option>
+<option>conv_layer_5</option>
+</select>
+</div>
+
+<div class="control-group">
+<label>Intensidad del Heatmap</label>
+<input type="range" min="0" max="100">
+</div>
+
+<div class="control-group">
+<label>Colormap</label>
+<select>
+<option>Jet</option>
+<option>Hot</option>
+<option>Inferno</option>
+</select>
+</div>
+
+<div class="control-group">
+<label>Umbral de Activación</label>
+<input type="range" min="0" max="100">
+</div>
+
+</div>
+
+<div class="section-title">Proceso Grad-CAM</div>
+
+<div class="pipeline">
+
+Cargando modelo CNN...<br>
+Seleccionando capa convolucional...<br>
+Calculando gradientes...<br>
+Generando mapa de activación...<br>
+Normalizando mapa de calor...<br>
+Superponiendo heatmap en imagen...<br>
+Visualización lista.<br>
+
+</div>
+
+<div class="buttons">
+
+<button class="generate">Generar Mapa de Calor</button>
+<button class="reset">Reiniciar</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Validación Médica - Diagnóstico IA</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f1f5f9;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    background:#0f766e;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:5px;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:1200px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* TITULOS */
+
+.section-title{
+    font-size:20px;
+    border-bottom:2px solid #e2e8f0;
+    padding-bottom:8px;
+    margin-bottom:15px;
+}
+
+/* TABLA */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    border:1px solid #e2e8f0;
+    padding:10px;
+}
+
+th{
+    background:#f8fafc;
+}
+
+/* VISUALIZACION */
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.viewer{
+    border:1px solid #cbd5e1;
+    padding:10px;
+    border-radius:6px;
+    text-align:center;
+}
+
+.viewer img{
+    width:100%;
+    height:280px;
+    object-fit:contain;
+    background:#f8fafc;
+}
+
+/* RESULTADO IA */
+
+.ai-result{
+    margin-top:15px;
+    padding:15px;
+    background:#fee2e2;
+    border-radius:6px;
+    color:#991b1b;
+}
+
+/* FORMULARIO */
+
+.form-group{
+    margin-top:15px;
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+select, textarea{
+    padding:8px;
+    border:1px solid #cbd5e0;
+    border-radius:5px;
+}
+
+/* BOTONES */
+
+.buttons{
+    margin-top:25px;
+    text-align:right;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.confirm{
+    background:#16a34a;
+    color:white;
+}
+
+.modify{
+    background:#2563eb;
+    color:white;
+}
+
+.cancel{
+    background:#ef4444;
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Sistema IA para Detección de Cáncer de Mama</h1>
+<p>Validación Médica del Diagnóstico</p>
+</header>
+
+<div class="container">
+
+<div class="section-title">Información del Paciente</div>
+
+<table>
+
+<tr>
+<th>ID Paciente</th>
+<th>Nombre</th>
+<th>Edad</th>
+<th>ID Estudio</th>
+</tr>
+
+<tr>
+<td>PAC-001</td>
+<td>Maria Lopez</td>
+<td>52</td>
+<td>EST-2045</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Resultados del Análisis IA</div>
+
+<div class="ai-result">
+
+<p><strong>Clasificación IA:</strong> Sospecha de malignidad</p>
+<p><strong>Probabilidad de cáncer:</strong> 72%</p>
+
+</div>
+
+<br>
+
+<div class="section-title">Visualización del Estudio</div>
+
+<div class="grid">
+
+<div class="viewer">
+<h3>Mastografía Analizada</h3>
+<img src="">
+</div>
+
+<div class="viewer">
+<h3>Mapa de Calor (Grad-CAM)</h3>
+<img src="">
+</div>
+
+</div>
+
+<br>
+
+<div class="section-title">Decisión del Radiólogo</div>
+
+<div class="form-group">
+
+<label>Diagnóstico Final</label>
+
+<select>
+<option>Confirmar diagnóstico de la IA</option>
+<option>Benigno</option>
+<option>Maligno</option>
+<option>Requiere estudios adicionales</option>
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Observaciones del Radiólogo</label>
+
+<textarea rows="5" placeholder="Agregar comentarios clínicos..."></textarea>
+
+</div>
+
+<div class="buttons">
+
+<button class="confirm">Confirmar Diagnóstico</button>
+<button class="modify">Guardar Corrección</button>
+<button class="cancel">Cancelar</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

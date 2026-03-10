@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Onco IA - Registro de Estudio Mamográfico</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    background:#6b46c1;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin:5px 0 0 0;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:1000px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.section-title{
+    font-size:20px;
+    margin-bottom:20px;
+    border-bottom:2px solid #e2e8f0;
+    padding-bottom:10px;
+}
+
+/* GRID */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+input, select, textarea{
+    padding:8px;
+    border:1px solid #cbd5e0;
+    border-radius:5px;
+}
+
+.full{
+    grid-column:1 / span 2;
+}
+
+/* AREA DICOM */
+
+.dicom-box{
+    border:2px dashed #a0aec0;
+    padding:30px;
+    text-align:center;
+    border-radius:6px;
+    color:#4a5568;
+}
+
+/* BOTONES */
+
+.buttons{
+    margin-top:30px;
+    text-align:right;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.save{
+    background:#38a169;
+    color:white;
+}
+
+.clear{
+    background:#e53e3e;
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Onco AI</h1>
+<p>Registro de Estudio Mamográfico</p>
+</header>
+
+<div class="container">
+
+<form>
+
+<div class="section-title">Paciente</div>
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>ID Paciente</label>
+<input type="text" placeholder="Buscar ID paciente">
+</div>
+
+<div class="form-group">
+<label>Nombre del Paciente</label>
+<input type="text" placeholder="Nombre completo">
+</div>
+
+</div>
+
+<br>
+
+<div class="section-title">Información del Estudio</div>
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>ID del Estudio</label>
+<input type="text" placeholder="Ej: EST-00045">
+</div>
+
+<div class="form-group">
+<label>Fecha del Estudio</label>
+<input type="date">
+</div>
+
+<div class="form-group">
+<label>Técnico Radiólogo</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Equipo de Mastografía</label>
+<input type="text" placeholder="Modelo del equipo">
+</div>
+
+<div class="form-group">
+<label>Tipo de Estudio</label>
+<select>
+<option>Mastografía bilateral</option>
+<option>Mastografía unilateral</option>
+<option>Seguimiento</option>
+<option>Control anual</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Centro Médico</label>
+<input type="text">
+</div>
+
+</div>
+
+<br>
+
+<div class="section-title">Carga de Imágenes DICOM</div>
+
+<div class="dicom-box">
+<p>Arrastre las imágenes DICOM aquí</p>
+<p>o</p>
+<input type="file">
+<p>Las imágenes serán enviadas al servidor PACS</p>
+</div>
+
+<br>
+
+<div class="section-title">Metadatos Clínicos</div>
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>Densidad Mamaria</label>
+<select>
+<option>Tipo A - Grasa</option>
+<option>Tipo B - Fibroglandular disperso</option>
+<option>Tipo C - Heterogénea</option>
+<option>Tipo D - Extremadamente densa</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Motivo del Estudio</label>
+<select>
+<option>Chequeo rutinario</option>
+<option>Seguimiento</option>
+<option>Sospecha clínica</option>
+</select>
+</div>
+
+<div class="form-group full">
+<label>Notas del Técnico</label>
+<textarea rows="4"></textarea>
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button class="save">Registrar Estudio</button>
+<button class="clear">Cancelar</button>
+
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>

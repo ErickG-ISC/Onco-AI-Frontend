@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Onco AI - Retroalimentación del Modelo IA</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f1f5f9;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    background:#1e293b;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:5px;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:1100px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* TITULOS */
+
+.section-title{
+    font-size:20px;
+    border-bottom:2px solid #e2e8f0;
+    padding-bottom:8px;
+    margin-bottom:15px;
+}
+
+/* TABLA */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    border:1px solid #e2e8f0;
+    padding:10px;
+}
+
+th{
+    background:#f8fafc;
+}
+
+/* GRID IMAGENES */
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.image-box{
+    border:1px solid #cbd5e1;
+    border-radius:6px;
+    padding:10px;
+    text-align:center;
+}
+
+.image-box img{
+    width:100%;
+    height:250px;
+    object-fit:contain;
+    background:#f8fafc;
+}
+
+/* FORMULARIO */
+
+label{
+    font-weight:bold;
+}
+
+select, textarea{
+    width:100%;
+    padding:8px;
+    border-radius:5px;
+    border:1px solid #cbd5e1;
+}
+
+textarea{
+    margin-top:8px;
+}
+
+/* BOTONES */
+
+.buttons{
+    margin-top:25px;
+    text-align:right;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.save{
+    background:#16a34a;
+    color:white;
+}
+
+.cancel{
+    background:#ef4444;
+    color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>OncoAI</h1>
+<p>Retroalimentación del Modelo</p>
+</header>
+
+<div class="container">
+
+<div class="section-title">Información del Caso</div>
+
+<table>
+
+<tr>
+<th>ID Paciente</th>
+<th>ID Estudio</th>
+<th>Fecha Análisis</th>
+<th>Radiólogo</th>
+</tr>
+
+<tr>
+<td>PAC-001</td>
+<td>EST-2045</td>
+<td>2026-03-09</td>
+<td>Dr. Juan Pérez</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Comparación de Diagnósticos</div>
+
+<table>
+
+<tr>
+<th>Predicción IA</th>
+<th>Probabilidad Maligno</th>
+<th>Diagnóstico Médico</th>
+<th>Coincidencia</th>
+</tr>
+
+<tr>
+<td>Sospecha de malignidad</td>
+<td>0.72</td>
+<td>Benigno</td>
+<td>No coincide</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Imágenes Analizadas</div>
+
+<div class="grid">
+
+<div class="image-box">
+<h3>Imagen Original</h3>
+<img src="">
+</div>
+
+<div class="image-box">
+<h3>Mapa de Calor (Grad-CAM)</h3>
+<img src="">
+</div>
+
+</div>
+
+<br>
+
+<div class="section-title">Corrección Médica</div>
+
+<label>Etiqueta correcta para el dataset:</label>
+
+<select>
+<option>Benigno</option>
+<option>Maligno</option>
+<option>Indeterminado</option>
+</select>
+
+<br><br>
+
+<label>Comentarios del especialista:</label>
+
+<textarea rows="4" placeholder="Describir la razón de la corrección o discrepancia con el modelo IA..."></textarea>
+
+<br><br>
+
+<label>¿Agregar este caso al dataset de entrenamiento?</label>
+
+<select>
+<option>Sí</option>
+<option>No</option>
+</select>
+
+<div class="buttons">
+
+<button class="save">Guardar Retroalimentación</button>
+<button class="cancel">Cancelar</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

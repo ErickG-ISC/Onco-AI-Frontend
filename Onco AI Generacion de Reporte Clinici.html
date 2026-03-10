@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Onco AI - Generación de Reporte Clínico</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f1f5f9;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    background:#1e3a8a;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:5px;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:1200px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* TITULOS */
+
+.section-title{
+    font-size:20px;
+    border-bottom:2px solid #e2e8f0;
+    padding-bottom:8px;
+    margin-bottom:15px;
+}
+
+/* TABLA */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    border:1px solid #e2e8f0;
+    padding:10px;
+}
+
+th{
+    background:#f8fafc;
+}
+
+/* GRID IMAGENES */
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.viewer{
+    border:1px solid #cbd5e1;
+    border-radius:6px;
+    padding:10px;
+    text-align:center;
+}
+
+.viewer img{
+    width:100%;
+    height:260px;
+    object-fit:contain;
+    background:#f8fafc;
+}
+
+/* RESULTADO */
+
+.result{
+    margin-top:15px;
+    padding:20px;
+    background:#fef3c7;
+    border:1px solid #fde68a;
+    border-radius:6px;
+}
+
+/* OBSERVACIONES */
+
+textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #cbd5e0;
+    border-radius:5px;
+}
+
+/* BOTONES */
+
+.buttons{
+    margin-top:25px;
+    text-align:right;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.generate{
+    background:#2563eb;
+    color:white;
+}
+
+.export{
+    background:#16a34a;
+    color:white;
+}
+
+.cancel{
+    background:#ef4444;
+    color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Onco AI</h1>
+<p>Generación de Reporte Clínico</p>
+</header>
+
+<div class="container">
+
+<div class="section-title">Datos del Paciente</div>
+
+<table>
+
+<tr>
+<th>ID Paciente</th>
+<th>Nombre</th>
+<th>Edad</th>
+<th>ID Estudio</th>
+<th>Fecha</th>
+</tr>
+
+<tr>
+<td>PAC-001</td>
+<td>Maria Lopez</td>
+<td>52</td>
+<td>EST-2045</td>
+<td>2026-03-09</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Resultados del Modelo de IA</div>
+
+<table>
+
+<tr>
+<th>Clasificación IA</th>
+<th>Probabilidad Benigno</th>
+<th>Probabilidad Maligno</th>
+</tr>
+
+<tr>
+<td>Sospecha de malignidad</td>
+<td>0.28</td>
+<td>0.72</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Validación Médica</div>
+
+<table>
+
+<tr>
+<th>Radiólogo</th>
+<th>Diagnóstico Final</th>
+<th>Fecha Validación</th>
+</tr>
+
+<tr>
+<td>Dr. Juan Pérez</td>
+<td>Requiere estudios adicionales</td>
+<td>2026-03-09</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Imágenes del Análisis</div>
+
+<div class="grid">
+
+<div class="viewer">
+<h3>Mastografía Analizada</h3>
+<img src="">
+</div>
+
+<div class="viewer">
+<h3>Mapa de Calor (Grad-CAM)</h3>
+<img src="">
+</div>
+
+</div>
+
+<br>
+
+<div class="section-title">Observaciones Médicas</div>
+
+<textarea rows="5" placeholder="Registrar comentarios clínicos o recomendaciones para el seguimiento del paciente..."></textarea>
+
+<div class="result">
+
+<h3>Conclusión del Reporte</h3>
+
+<p>
+El análisis asistido por inteligencia artificial detectó regiones con activación
+asociadas a posibles anomalías en el tejido mamario.  
+Se recomienda evaluación clínica adicional y seguimiento radiológico.
+</p>
+
+</div>
+
+<div class="buttons">
+
+<button class="generate">Generar Reporte</button>
+<button class="export">Exportar PDF</button>
+<button class="cancel">Cancelar</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

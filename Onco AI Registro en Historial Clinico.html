@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Onco AI - Historial Clínico del Paciente</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#eef2f7;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    background:#0f172a;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:5px;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:1200px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* TITULOS */
+
+.section-title{
+    font-size:20px;
+    border-bottom:2px solid #e2e8f0;
+    padding-bottom:8px;
+    margin-bottom:15px;
+}
+
+/* TABLAS */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    border:1px solid #e2e8f0;
+    padding:10px;
+}
+
+th{
+    background:#f8fafc;
+}
+
+/* RESULTADO FINAL */
+
+.final-diagnosis{
+    margin-top:20px;
+    padding:20px;
+    border-radius:6px;
+    background:#dcfce7;
+    border:1px solid #86efac;
+}
+
+/* HISTORIAL */
+
+.history-box{
+    margin-top:15px;
+}
+
+/* BOTONES */
+
+.buttons{
+    margin-top:25px;
+    text-align:right;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.save{
+    background:#16a34a;
+    color:white;
+}
+
+.export{
+    background:#2563eb;
+    color:white;
+}
+
+.cancel{
+    background:#ef4444;
+    color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Onco AI</h1>
+<p>Registro en Historial Clínico</p>
+</header>
+
+<div class="container">
+
+<div class="section-title">Datos del Paciente</div>
+
+<table>
+
+<tr>
+<th>ID Paciente</th>
+<th>Nombre</th>
+<th>Edad</th>
+<th>Sexo</th>
+</tr>
+
+<tr>
+<td>PAC-001</td>
+<td>Maria Lopez</td>
+<td>52</td>
+<td>Femenino</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Información del Estudio</div>
+
+<table>
+
+<tr>
+<th>ID Estudio</th>
+<th>Fecha</th>
+<th>Tipo de Estudio</th>
+<th>Centro Médico</th>
+</tr>
+
+<tr>
+<td>EST-2045</td>
+<td>2026-03-09</td>
+<td>Mastografía bilateral</td>
+<td>Hospital General</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Resultado Final del Diagnóstico</div>
+
+<div class="final-diagnosis">
+
+<p><strong>Diagnóstico IA:</strong> Sospecha de malignidad</p>
+<p><strong>Probabilidad estimada:</strong> 72%</p>
+<p><strong>Diagnóstico confirmado por radiólogo:</strong> Requiere estudios adicionales</p>
+
+</div>
+
+<br>
+
+<div class="section-title">Reporte Clínico Asociado</div>
+
+<table>
+
+<tr>
+<th>ID Reporte</th>
+<th>Archivo</th>
+<th>Fecha Generación</th>
+</tr>
+
+<tr>
+<td>REP-9901</td>
+<td>reporte_mastografia_9901.pdf</td>
+<td>2026-03-09</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Historial Clínico del Paciente</div>
+
+<div class="history-box">
+
+<table>
+
+<tr>
+<th>Fecha</th>
+<th>Estudio</th>
+<th>Diagnóstico</th>
+<th>Observaciones</th>
+</tr>
+
+<tr>
+<td>2025-04-10</td>
+<td>Mastografía</td>
+<td>Benigno</td>
+<td>Control anual</td>
+</tr>
+
+<tr>
+<td>2026-03-09</td>
+<td>Mastografía</td>
+<td>Requiere estudios adicionales</td>
+<td>Área sospechosa detectada</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="buttons">
+
+<button class="save">Guardar en Historial Clínico</button>
+<button class="export">Ver Reporte PDF</button>
+<button class="cancel">Cancelar</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

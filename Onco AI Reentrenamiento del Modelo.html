@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Onco AI - Reentrenamiento del Modelo IA</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#eef2f7;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    background:#0f172a;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:5px;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:1150px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* TITULOS */
+
+.section-title{
+    font-size:20px;
+    border-bottom:2px solid #e2e8f0;
+    padding-bottom:8px;
+    margin-bottom:15px;
+}
+
+/* TABLAS */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    border:1px solid #e2e8f0;
+    padding:10px;
+}
+
+th{
+    background:#f8fafc;
+}
+
+/* STATUS */
+
+.status{
+    margin-top:15px;
+    padding:15px;
+    border-radius:6px;
+    background:#dbeafe;
+    border:1px solid #93c5fd;
+}
+
+/* METRICAS */
+
+.metrics{
+    margin-top:10px;
+    padding:15px;
+    background:#f0fdf4;
+    border:1px solid #86efac;
+    border-radius:6px;
+}
+
+/* FORM */
+
+label{
+    font-weight:bold;
+}
+
+input, select{
+    width:100%;
+    padding:8px;
+    border-radius:5px;
+    border:1px solid #cbd5e1;
+}
+
+/* BOTONES */
+
+.buttons{
+    margin-top:25px;
+    text-align:right;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.train{
+    background:#2563eb;
+    color:white;
+}
+
+.stop{
+    background:#ef4444;
+    color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Onco AI</h1>
+<p>Reentrenamiento del Modelo</p>
+</header>
+
+<div class="container">
+
+<div class="section-title">Dataset Actualizado</div>
+
+<table>
+
+<tr>
+<th>Total Casos Dataset</th>
+<th>Nuevos Casos Validados</th>
+<th>Casos Benignos</th>
+<th>Casos Malignos</th>
+</tr>
+
+<tr>
+<td>12,450</td>
+<td>320</td>
+<td>7,850</td>
+<td>4,600</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Configuración del Entrenamiento</div>
+
+<table>
+
+<tr>
+<th>Parámetro</th>
+<th>Valor</th>
+</tr>
+
+<tr>
+<td>Framework</td>
+<td>PyTorch</td>
+</tr>
+
+<tr>
+<td>Batch Size</td>
+<td>32</td>
+</tr>
+
+<tr>
+<td>Epochs</td>
+<td>50</td>
+</tr>
+
+<tr>
+<td>Learning Rate</td>
+<td>0.0001</td>
+</tr>
+
+<tr>
+<td>Uso de GPU</td>
+<td>GPU NVIDIA A100</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Estado del Entrenamiento</div>
+
+<div class="status">
+
+<p><strong>Estado:</strong> Preparado para iniciar entrenamiento</p>
+<p><strong>Última ejecución:</strong> 2026-02-18</p>
+<p><strong>Versión actual del modelo:</strong> v1.3</p>
+
+</div>
+
+<br>
+
+<div class="section-title">Resultados del Entrenamiento</div>
+
+<div class="metrics">
+
+<p><strong>Accuracy:</strong> 94.8%</p>
+<p><strong>Precision:</strong> 93.2%</p>
+<p><strong>Recall:</strong> 92.7%</p>
+<p><strong>AUC-ROC:</strong> 0.96</p>
+
+</div>
+
+<br>
+
+<div class="section-title">Versionado del Modelo</div>
+
+<table>
+
+<tr>
+<th>Versión</th>
+<th>Fecha</th>
+<th>Dataset usado</th>
+<th>Estado</th>
+</tr>
+
+<tr>
+<td>v1.3</td>
+<td>2026-02-18</td>
+<td>Dataset_12450</td>
+<td>Producción</td>
+</tr>
+
+<tr>
+<td>v1.4</td>
+<td>2026-03-10</td>
+<td>Dataset_12770</td>
+<td>En entrenamiento</td>
+</tr>
+
+</table>
+
+<div class="buttons">
+
+<button class="train">Iniciar Reentrenamiento</button>
+<button class="stop">Detener</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

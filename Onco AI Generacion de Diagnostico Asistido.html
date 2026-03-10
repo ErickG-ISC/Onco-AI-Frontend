@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Onco AI - Diagnóstico Asistido por IA</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    background:#1d4ed8;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:5px;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:1200px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* TITULOS */
+
+.section-title{
+    font-size:20px;
+    border-bottom:2px solid #e2e8f0;
+    padding-bottom:8px;
+    margin-bottom:15px;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.viewer{
+    border:1px solid #cbd5e1;
+    padding:10px;
+    border-radius:6px;
+    text-align:center;
+}
+
+.viewer img{
+    width:100%;
+    height:250px;
+    object-fit:contain;
+    background:#f8fafc;
+}
+
+/* TABLA */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    border:1px solid #e2e8f0;
+    padding:10px;
+}
+
+th{
+    background:#f1f5f9;
+}
+
+/* RESULTADO */
+
+.result{
+    margin-top:15px;
+    padding:20px;
+    border-radius:6px;
+    background:#fff7ed;
+    border:1px solid #fed7aa;
+}
+
+/* LOG */
+
+.pipeline{
+    margin-top:20px;
+    background:#111827;
+    color:#e5e7eb;
+    padding:15px;
+    border-radius:5px;
+    font-family:monospace;
+    height:150px;
+    overflow-y:auto;
+}
+
+/* BOTONES */
+
+.buttons{
+    margin-top:25px;
+    text-align:right;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.generate{
+    background:#16a34a;
+    color:white;
+}
+
+.save{
+    background:#2563eb;
+    color:white;
+}
+
+.reset{
+    background:#ef4444;
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Onco AI</h1>
+<p>Generación de Diagnóstico Asistido</p>
+</header>
+
+<div class="container">
+
+<div class="section-title">Información del Paciente</div>
+
+<table>
+
+<tr>
+<th>ID Paciente</th>
+<th>Nombre</th>
+<th>Edad</th>
+<th>ID Estudio</th>
+</tr>
+
+<tr>
+<td>PAC-001</td>
+<td>Maria Lopez</td>
+<td>52</td>
+<td>EST-2045</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Resultados del Modelo de IA</div>
+
+<table>
+
+<tr>
+<th>Clasificación</th>
+<th>Probabilidad Benigno</th>
+<th>Probabilidad Maligno</th>
+<th>Confianza</th>
+</tr>
+
+<tr>
+<td>Sospecha de malignidad</td>
+<td>0.28</td>
+<td>0.72</td>
+<td>Alta</td>
+</tr>
+
+</table>
+
+<br>
+
+<div class="section-title">Visualización del Análisis</div>
+
+<div class="grid">
+
+<div class="viewer">
+<h3>Mastografía Original</h3>
+<img src="">
+</div>
+
+<div class="viewer">
+<h3>Mapa de Calor Grad-CAM</h3>
+<img src="">
+</div>
+
+</div>
+
+<div class="result">
+
+<h3>Conclusión del Sistema</h3>
+
+<p>
+El modelo de inteligencia artificial detectó regiones con alta activación
+asociadas a posibles anomalías en el tejido mamario.  
+Se recomienda evaluación por radiólogo especializado.
+</p>
+
+<p><strong>Probabilidad estimada de malignidad: 72%</strong></p>
+
+</div>
+
+<div class="section-title">Registro del Proceso</div>
+
+<div class="pipeline">
+
+Consolidando resultados del modelo...<br>
+Generando entidad ResultadoAnalisis...<br>
+Agregando metadatos del estudio...<br>
+Vinculando imágenes analizadas...<br>
+Preparando estructura para almacenamiento...<br>
+Resultado listo para guardar en base de datos.<br>
+
+</div>
+
+<div class="buttons">
+
+<button class="generate">Generar Diagnóstico</button>
+<button class="save">Guardar Resultado</button>
+<button class="reset">Cancelar</button>
+
+</div>
+
+</div>
+
+</body>
+</html>
