@@ -133,14 +133,48 @@ button{
     color:white;
 }
 
+/* LOGO REDONDO */
+.rounded-logo {
+    border-radius: 50%; /* Hace que la imagen sea redondeada */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}    
+
+/* HEADER PERSONALIZADO */
+.site-header {
+    display: flex;
+  align-items: flex-start;   /* alinea el contenido al borde superior */
+}
+
+/* Separación entre el logo y el bloque de texto */
+.logo-link {
+    margin-right: 1rem;
+}
+
+/* El bloque que contiene h1 y p ya no necesita flex;
+   con el flujo normal del documento, el <p> queda bajo el <h1>. */
+.title-block {
+    display: block;            /* opcional, el valor por defecto */
+}
+
+/* Opcionales: eliminar márgenes que puedan crear espacio extra */
+.title-block h1,
+.title-block p {
+    margin: 0;
+}
+
+
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Onco AI</h1>
-<p>Procesamiento de Imágenes Médicas</p>
+<header  style="display: flex; align-items: center;">
+<a href="index.html">
+    <img src="images/logo.jpg" alt="Onco AI Logo" width="50" height="50" class="rounded-logo">
+</a><div class="title-block">
+    <h1>Onco AI</h1>
+    <p>Procesamiento de Imágenes Médicas</p>
+</div> 
 </header>
 
 <div class="container">
